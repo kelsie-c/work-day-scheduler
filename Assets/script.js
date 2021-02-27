@@ -6,6 +6,7 @@ var allHours = $('.time-block');
 console.log(allHours);
 var targetDiv;
 
+
 // Sets current day on page
 currentDay.text(moment().format('[Today is] MMMM Do, YYYY'));
 currentHour = moment().format('H');
@@ -52,6 +53,10 @@ function setBkgrndColor() {
 
 // This function is called in html when button is clicked
 $(".saveBtn").on("click", function(event) {
+
     var hourDiv = event.target.parentElement.children[0].value;
     console.log(hourDiv);
+
+    localStorage.setItem(event.target.parentElement.parentElement.getAttribute("data-block"), hourDiv);
 });
+
