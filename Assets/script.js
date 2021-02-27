@@ -35,17 +35,23 @@ function setBkgrndColor() {
         // past
         if (currentDiv < currentHour) {
             // target each div and change classes
-            targetDiv.children().eq(1).children().eq(0).addClass("past").removeClass("present future");
+            targetDiv.find("textarea").addClass("past").removeClass("present future");
         }
         // present
         if (currentDiv == currentHour) {
             // target each div and change classes
-            targetDiv.children().eq(1).children().eq(0).addClass("present").removeClass("past future");
+            targetDiv.find("textarea").addClass("present").removeClass("past future");
         }
         // future
         if (currentDiv > currentHour) {
             // target each div and change classes
-            targetDiv.children().eq(1).children().eq(0).addClass("future").removeClass("past present");
+            targetDiv.find("textarea").addClass("future").removeClass("past present");
         }
     }
 }
+
+// This function is called in html when button is clicked
+$(".saveBtn").on("click", function(event) {
+    var hourDiv = event.target.parentElement.children[0].value;
+    console.log(hourDiv);
+});
