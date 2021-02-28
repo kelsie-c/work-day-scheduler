@@ -26,7 +26,7 @@ See the deployed project [here](https://kelsie-c.github.io/work-day-scheduler/)
 
 ## Preview the App
 
-![A user demonstrates the app functionality](./assets/images/Work-Day-Scheduler.gif)
+[A user demonstrates the app functionality](./Assets/Images/Work-Day-Scheduler.gif)
 
 ## Final Thoughts
 
