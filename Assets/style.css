@@ -25,6 +25,18 @@ textarea {
   white-space: pre-wrap;
 }
 
+.container {
+  margin-bottom: 30px;
+}
+
+.clearMyDay {
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ff6961;
+  color: white;
+}
+
 .time-block{
   text-align: center;
   border-radius: 15px;

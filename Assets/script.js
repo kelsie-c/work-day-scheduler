@@ -3,6 +3,7 @@ var currentDay = $('#currentDay');
 var currentHour;
 var workItems = [];
 var allHours = $('.time-block');
+var clearBtn = $('.clearMyDay');
 var targetDiv;
 var storageDiv;
 
@@ -11,6 +12,12 @@ currentDay.text(moment().format('[Today is] MMMM Do, YYYY'));
 currentHour = moment().format('H');
 
 setBkgrndColor();
+
+// Clears Schedule
+function clearStorage() {
+    localStorage.clear();
+    loadSchedule();
+}
 
 // Checks current day and hour and updates textarea background colors once a minute
 setInterval(function() {
@@ -29,8 +36,8 @@ function setBkgrndColor() {
         var currentDiv = allHours[i].getAttribute("data-block");
         targetDiv = $(allHours[i]);
 
-        console.log(currentDiv);
-        console.log(targetDiv);
+        // console.log(currentDiv);
+        // console.log(targetDiv);
 
         // past
         if (currentDiv < currentHour) {
